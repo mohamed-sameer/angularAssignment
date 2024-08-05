@@ -1,0 +1,24 @@
+<section class="portfolio py-5">
+  <div class="heading py-3">
+    <h2 class="fs-1 text-center text-uppercase">portfolio</h2>
+    <app-star-divider-dark></app-star-divider-dark>
+  </div>
+  <div class="container">
+    <div class="row row-cols-3 g-2">
+      @for (project of portfolios; track $index) {
+      <app-card
+        [portfolio]="project"
+        (click)="open()"
+        (click)="getImgSrc(project.imgSrc)"
+      ></app-card>
+      }
+    </div>
+  </div>
+</section>
+
+@if (isOpen) {
+<app-img-drawer
+  (changeStats)="close($event)"
+  [imgSrc]="imgSrc"
+></app-img-drawer>
+}
