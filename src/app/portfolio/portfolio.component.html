@@ -4,7 +4,7 @@
     <app-star-divider-dark></app-star-divider-dark>
   </div>
   <div class="container">
-    <div class="row row-cols-3 g-2">
+    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-2">
       @for (project of portfolios; track $index) {
       <app-card
         [portfolio]="project"

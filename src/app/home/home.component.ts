@@ -9,5 +9,6 @@ import { StarDividerComponent } from "../star-divider/star-divider.component";
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  homeImgSrc:string = "./assets/avataaars.svg"
 
 }
